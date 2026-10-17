@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exfat-grow"
+dynamic = ["version"]
+description = "Grow an exFAT filesystem in place on Linux"
+readme = "README.md"
+license = { text = "GPL-2.0-or-later" }
+authors = [{ name = "Giovanni Andrea Binda", email = "322129496+giobinda@users.noreply.github.com" }]
+requires-python = ">=3.8"
+keywords = ["exfat", "filesystem", "resize", "partition"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Filesystems",
+]
+
+[project.scripts]
+exfat-grow = "exfat_grow:main"
+
+[tool.setuptools]
+py-modules = ["exfat_grow"]
+
+[tool.setuptools.dynamic]
+version = { attr = "exfat_grow.__version__" }

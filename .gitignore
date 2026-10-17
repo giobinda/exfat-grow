@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.egg-info/
+# never commit disk images or backups produced by the tool
+*.img
+exfat-grow-undo-*.bin
+*-partition-table-*.sfdisk
